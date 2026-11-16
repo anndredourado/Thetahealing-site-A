@@ -1,0 +1,95 @@
+/* Contrast follows the page's decision points; typography, DNA and humanity stay intact. */
+.art-page{--contrast-plum:#49314f;--contrast-ink:#46304e;--contrast-champagne:#f2e7d9;--contrast-coral:#c38471}
+.art-page .editorial-discovery{background:#faf7f2}
+.art-page .editorial-opening{position:relative;isolation:isolate;padding:28px 24px;border-radius:24px;background:linear-gradient(135deg,#553b5e,#39283e);overflow:hidden;box-shadow:0 14px 40px #50365b16}
+.art-page .editorial-opening h2{color:#fff8ee;font-size:clamp(30px,8.1vw,41px);letter-spacing:-.65px;position:relative;z-index:1}
+.art-page .editorial-opening p{color:#f1e7f1;position:relative;z-index:1}
+.art-page .editorial-opening .lp-eyebrow{color:#e8c4b5}
+.art-page .editorial-opening .lp-eyebrow:after{border-color:#cfa7ac}
+.art-page .editorial-dna{position:absolute;right:-55px;top:-40px;width:210px;height:130%;object-fit:contain;opacity:.12;pointer-events:none;z-index:0;transform:rotate(18deg)}
+.art-page .editorial-highlights{gap:0;margin-top:24px}
+.art-page .editorial-highlights li{padding:22px 0;border-top:1px solid #d6c1d6}
+.art-page .editorial-highlights .lp-index{color:#9f665a}
+.art-page .method-section{background:linear-gradient(180deg,#f0e7f2,#faf7f2 65%)}
+.art-page .learning-section{background:#fffdf8;border-top:1px solid #e9dfe9}
+.art-page .learning-item{background:linear-gradient(145deg,#fffdf9,#f2eaf5);border-color:#d7c3df;transition:box-shadow .22s,border-color .22s,transform .22s}
+.art-page .learning-item:hover{border-color:#a781b3;box-shadow:0 10px 24px #69467414}
+.art-page .learning-item[open]{border-color:#9563a3;border-left:3px solid #c78f7c;background:#fcf8fd}
+.art-page .topic-toggle{color:#633b72;border-top-color:#cbb3d4;font-size:12px}
+.art-page .toggle-symbol{background:#724b80;box-shadow:0 3px 10px #724b8026}
+.art-page .experience-section{background:radial-gradient(ellipse at 90% 12%,#fff7eb 0%,transparent 62%),#f1e6d8}
+.art-page .documentary-feature,.art-page .documentary-group{position:relative;margin:0;min-width:0}
+.art-page .documentary-open{position:relative;display:block;overflow:hidden;border-radius:18px;box-shadow:0 14px 32px #51375124;border:5px solid #fffcf6;background:#eee5e1}
+.art-page .documentary-open img{display:block;width:100%;height:auto;border-radius:0;box-shadow:none;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.art-page .documentary-open:hover img{transform:scale(1.025)}
+.art-page .image-expand{position:absolute;right:12px;bottom:12px;width:40px;height:40px;display:grid;place-items:center;border:1px solid #fffcf6;background:#fffaf0ed;color:#654372;font:400 24px/1 var(--sans);border-radius:50%;box-shadow:0 3px 15px #35243e20}
+.art-page .real-testimonials{padding-top:32px;border-top-color:#cbb8bc}
+.art-page .real-quote-grid{gap:24px}
+.art-page .real-quote{padding:22px;background:#fffcf7;border-color:#d6c1cf;border-radius:18px;box-shadow:0 12px 30px #694a6310}
+.art-page .real-quote.featured{background:linear-gradient(140deg,#f0e4f3,#fffbf5);border:1px solid #b99bc7;box-shadow:0 15px 40px #64426f16}
+.art-page .quote-mark{color:#9f7aac}
+.art-page .quote-footer{margin-top:20px;padding-top:14px}
+.art-page .quote-initial{font:600 14px/1.3 var(--sans);color:#654371;letter-spacing:.1px}
+.art-page .message-preview{display:block;width:100%;margin-top:16px;background:#fff;border:1px solid #d7c8da;border-radius:12px;overflow:hidden;text-decoration:none;color:#674875}
+.art-page .message-preview img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.art-page .message-expand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;font:600 12px/1.3 var(--sans);background:#fffaf4;min-height:44px}
+.art-page .message-preview:hover .message-expand{background:#eee0f1;color:#4c315c}
+.art-page .testimonials-closing{margin-top:28px;padding-top:8px}
+.art-page .agenda-section{background:#eae0ef;border-top:1px solid #dbcbdf}
+.art-page .agenda{gap:18px}
+.art-page .agenda li{padding:22px 18px;border:1px solid #d4bfdc;border-radius:16px;background:#fffaf6bd;box-shadow:0 5px 16px #61466906}
+.art-page .agenda-day{color:#99665f}
+.art-page .program-continuity{display:grid;gap:24px;margin-top:36px;align-items:center}
+.art-page .documentary-group{width:min(100%,420px);margin-inline:auto}
+.art-page .documentary-group .documentary-open img{aspect-ratio:4/5;object-fit:cover;object-position:center 72%}
+.art-page .program-continuity .lp-closing{margin:0;text-align:left;max-width:none}
+.art-page .program-continuity .lp-closing p{margin-inline:0}
+.art-page .instructor-section{background:#fffcf5}
+.art-page .instructor-portrait{border-color:#d8becb;background:radial-gradient(ellipse at 80% 0,#fff8ec,#eadce9 70%)}
+.art-page .instructor-cta{margin-top:24px}
+.art-page .story-section{background:#f5ece2}
+.art-page .record-strip{display:block;margin-top:24px}
+.art-page .record-strip .documentary-open{max-width:100%}
+.art-page .story-statement{padding:24px 0 0}
+.art-page .offer-section{background:radial-gradient(ellipse at 90% 10%,#73577e55,transparent 65%),#49334f}
+.art-page .offer-section>.lp-container>h2{color:#fff8ed}
+.art-page .offer-section>.lp-container>.lp-eyebrow{color:#e3bdad}
+.art-page .offer-section>.lp-container>.lp-lead{color:#e8dce9}
+.art-page .offer-section .offer-panel{background:#fffaf5;border-color:#ddc5c9;box-shadow:0 18px 50px #21142930}
+.art-page .offer-section .section-helix{opacity:.17;filter:brightness(1.5)}
+.art-page .faq-section{background:#fffcf6}
+.art-page .faq-list summary{color:#5c3c69}
+.art-page .faq-list details[open]{padding-inline:14px;border-radius:12px;background:#efe4f3;border-bottom-color:transparent}
+/* Short labels and consistent pill geometry at every width. */
+.art-page .button{white-space:nowrap;font-size:16px;line-height:1.2;min-height:52px;padding:14px 20px;gap:14px;justify-content:center;border:1px solid #83568e;background:linear-gradient(115deg,#8c6298,#684174);box-shadow:inset 0 1px 0 #ffffff28,0 6px 18px #75517f24}
+.art-page .button svg,.art-page .button>span[aria-hidden]{flex:0 0 22px;width:22px;height:22px;font-size:22px;transition:transform .2s}
+.art-page .button:hover,.art-page .button:focus-visible{background:linear-gradient(115deg,#855891,#573365);box-shadow:0 0 0 4px #b58bc01c,0 0 24px #9e74ad50,0 10px 22px #52315f24;transform:translateY(-2px)}
+.art-page .button:hover svg,.art-page .button:hover>span[aria-hidden]{transform:translateX(3px)}
+.art-page .lp-cta,.art-page .primary-cta{justify-content:space-between}
+.art-page .offer-panel>.button{font-size:17px;min-width:0}
+.art-page .final-action .button{min-width:0}
+.art-page .photo-lightbox .lightbox-image-frame{height:auto;max-height:75dvh;overflow:auto;background:#f2ece7}
+.art-page .photo-lightbox img{height:auto;max-height:none;object-fit:contain}
+.art-page .formation-section .formation-editorial{grid-column:1/-1;max-width:940px}
+@media(min-width:700px){
+ .art-page .editorial-opening{padding:44px 40px;gap:0 40px}
+ .art-page .editorial-opening h2{font-size:42px;margin-bottom:0}
+ .art-page .editorial-intro{align-self:center}
+ .art-page .editorial-highlights{gap:32px;margin-top:28px}
+ .art-page .editorial-highlights li{padding-top:22px;padding-bottom:0}
+ .art-page .real-quote-grid{grid-template-columns:1fr 1fr;gap:28px}
+ .art-page .real-quote{padding:28px}
+ .art-page .real-quote.featured{padding:32px;grid-column:1/-1}
+ .art-page .real-quote.featured .message-preview{max-width:600px;margin:24px auto 0}
+ .art-page .real-quote.featured blockquote p{max-width:34ch}
+ .art-page .program-continuity{grid-template-columns:minmax(0,.75fr) minmax(0,1fr);gap:56px;margin-top:48px}
+ .art-page .agenda li{padding:28px 24px}
+ .art-page .button{font-size:17px;padding:15px 24px}
+ .art-page .offer-panel>.button{font-size:19px}
+ .art-page .story-section>.lp-container{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-items:start}
+ .art-page .story-section>.lp-container>.lp-eyebrow,.art-page .story-section>.lp-container>h2,.art-page .story-section>.lp-container>p,.art-page .story-section .story-statement{grid-column:1}
+ .art-page .record-strip{grid-column:2;grid-row:1/6;margin:0;align-self:center;transform:rotate(1.25deg)}
+ .art-page .documentary-feature .documentary-open{transform:rotate(-1.2deg)}
+ .art-page .documentary-group .documentary-open{transform:rotate(-1deg)}
+}
+@media(prefers-reduced-motion:reduce){.art-page .button,.art-page .button svg,.art-page .button>span[aria-hidden],.art-page .learning-item,.art-page .documentary-open img{transition:none}.art-page .button:hover,.art-page .documentary-open:hover img{transform:none}}

@@ -1,0 +1,75 @@
+/* A compact discovery: headline, native video and one action. */
+.art-page #descoberta .editorial-opening{display:block;margin-bottom:22px}
+.art-page #descoberta .editorial-opening h2{max-width:850px;margin-bottom:0}
+.art-page #descoberta .vsl-shell{overflow:visible;margin:0 0 18px;background:none;border:0;box-shadow:none}
+.art-page #descoberta .vsl-screen{width:100%;aspect-ratio:16/9;border:1px solid #c9b0d2;border-radius:14px;overflow:hidden;background:#35253b;box-shadow:0 10px 30px #50365b16}
+.art-page #descoberta .vsl-screen iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
+.art-page #descoberta .lp-cta{margin-top:0}
+.art-page .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Original supplied logo, intact, with a separate contact action. */
+.art-page .site-footer{display:flex;flex-direction:column;align-items:flex-start;gap:28px;padding:32px 24px;background:#faf7f2;border-top:1px solid #ddcddd}
+.art-page .footer-identity{max-width:100%}
+.art-page .footer-logo-link{display:block;width:200px;max-width:100%}
+.art-page .footer-logo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;mix-blend-mode:multiply}
+.art-page .footer-identity>p{font:400 12px/1.5 var(--sans);margin:8px 0 0;color:#745d7d}
+.art-page .footer-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px;max-width:100%}
+.art-page .footer-whatsapp{font-size:16px;white-space:nowrap}
+.art-page .footer-whatsapp svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.art-page .footer-back{font:400 13px/1.5 var(--sans);padding:8px 0;min-height:40px}
+@media(min-width:760px){
+ .art-page #descoberta .vsl-shell{max-width:960px;margin:0 auto 24px}
+ .art-page #descoberta .vsl-screen{border-radius:18px}
+ .art-page .site-footer{flex-direction:row;align-items:center;justify-content:space-between;padding:36px max(32px,calc((100vw - 1200px)/2));gap:40px}
+ .art-page .footer-logo-link{width:220px}
+ .art-page .footer-actions{align-items:flex-end}
+}
+.art-page .site-footer .footer-whatsapp{color:#fff8f1;font:600 16px/1.2 var(--sans)}
+
+/* One continuous discovery panel, with the native player inside its padding. */
+.art-page #descoberta .editorial-opening{margin-bottom:22px}
+.art-page #descoberta .editorial-opening h2{margin-bottom:24px}
+.art-page #descoberta .editorial-opening .vsl-shell{position:relative;z-index:1;margin:0;width:100%;max-width:960px}
+.art-page #descoberta .vsl-screen{border-color:#b59abb66;box-shadow:0 10px 30px #130d1933}
+.art-page .site-footer{align-items:center;text-align:center;gap:26px}
+.art-page .footer-identity{display:flex;flex-direction:column;align-items:center}
+.art-page .footer-logo-link{width:180px}
+.art-page .footer-logo{mix-blend-mode:darken;mask-image:radial-gradient(ellipse 70% 65% at center,#000 55%,transparent 100%)}
+.art-page .footer-actions{align-items:center;gap:14px}
+.art-page .footer-contact{margin:0;color:#5d3c65;font:400 16px/1.55 var(--sans)}
+.art-page .footer-whatsapp{max-width:100%}
+@media(min-width:760px){
+ .art-page #descoberta .editorial-opening .vsl-shell{margin:0 auto}
+ .art-page .site-footer{text-align:left}
+ .art-page .footer-identity{align-items:flex-start}
+ .art-page .footer-logo-link{width:190px}
+ .art-page .footer-actions{align-items:center;text-align:center}
+}
+@media(max-width:420px){
+ .art-page #descoberta .editorial-opening{padding:26px 18px 18px}
+ .art-page #descoberta .editorial-opening h2{font-size:clamp(28px,7.9vw,34px)}
+ .art-page #descoberta .vsl-screen{border-radius:10px}
+}
+
+/* Let the film occupy almost the full panel width; retain inset editorial copy. */
+.art-page #descoberta .editorial-opening{padding:28px 6px 6px}
+.art-page #descoberta .editorial-opening>.lp-eyebrow,
+.art-page #descoberta .editorial-opening>h2{margin-left:18px;margin-right:18px}
+.art-page #descoberta .editorial-opening .vsl-shell{width:100%;max-width:none;margin:0}
+.art-page #descoberta .vsl-screen{border-radius:18px;border:0}
+.art-page .vsl-sound-mask{position:absolute;inset:0;z-index:3;display:grid;place-items:center;background:#25142d4d}
+.art-page .vsl-sound-mask[hidden]{display:none}
+.art-page .vsl-sound-activate{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 22px;border:1px solid #fff8eeaa;border-radius:999px;background:#fff8eef2;color:#53345d;box-shadow:0 4px 24px #160d2440;font:600 16px/1.2 var(--sans);cursor:pointer}
+.art-page .vsl-sound-activate svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:759px){
+ .art-page #descoberta>.lp-container{padding-left:8px;padding-right:8px}
+ .art-page #descoberta .editorial-opening{border-radius:24px}
+ .art-page #descoberta>.lp-container>.lp-cta{margin-left:16px;margin-right:16px}
+}
+@media(min-width:760px){
+ .art-page #descoberta .editorial-opening{padding:38px 8px 8px}
+ .art-page #descoberta .editorial-opening>.lp-eyebrow,
+ .art-page #descoberta .editorial-opening>h2{margin-left:32px;margin-right:32px}
+}
+@media(max-width:759px){
+ .art-page #descoberta{padding-left:0;padding-right:0}
+}

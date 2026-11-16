@@ -1,0 +1,8 @@
+/* Supplied identity, preserved as an image with its original proportions. */
+.art-page .site-header{height:auto;min-height:112px;padding-top:10px;padding-bottom:10px}
+.art-page .brand{align-items:center;width:150px;max-width:100%;min-width:0}
+.art-page .brand-logo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;mix-blend-mode:multiply}
+.art-page .brand-caption{font-size:8px;margin-top:0;letter-spacing:.2px}
+@media(min-width:760px){.art-page .brand{width:180px}.art-page .brand-caption{font-size:10px}.art-page .site-header{min-height:145px}.art-page nav{top:140px}}
+@media(max-width:759px){.art-page nav{top:120px}}
+@media(max-width:359px){.art-page .brand{width:132px}.art-page .brand-caption{font-size:7px}}

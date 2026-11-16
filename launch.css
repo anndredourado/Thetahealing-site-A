@@ -1,0 +1,80 @@
+/* Bounded refinements to the approved lavender/champagne direction. */
+.art-page .button{display:inline-flex;align-items:center;justify-content:space-between;background:linear-gradient(115deg,#906a9d,#6d457d);border:1px solid transparent;border-radius:999px;box-shadow:0 5px 18px #80608b15;gap:16px;max-width:100%;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.art-page .button:hover,.art-page .button:focus-visible{background:linear-gradient(115deg,#876093,#654072);box-shadow:0 0 0 4px #ac87b41c,0 0 26px #a683b34d,0 9px 24px #65457420;transform:translateY(-1px)}
+.art-page .lp-cta>span[aria-hidden]{border:0;background:none;border-radius:0;width:24px;flex-basis:24px;height:24px;font-size:24px}
+.art-page .primary-cta,.art-page [data-kiwify]{box-shadow:0 5px 22px #9876a238,0 0 22px #b699c22b}
+/* More of the uninterrupted rear DNA plane is exposed; no spacer. */
+.art-page .method-principles{padding-left:80px;gap:14px}
+.art-page .method-principles li{padding:14px;border-radius:14px;background:linear-gradient(130deg,#fffdfaea,#fcf8f4d6);backdrop-filter:blur(3px);box-shadow:0 2px 12px #84668e0e,inset 0 1px 0 #fff}
+.art-page .method-principles h3{font-size:22px;line-height:1.1;margin:0 0 8px;text-wrap:pretty;letter-spacing:-.35px}
+.art-page .method-principles p{font-size:14px;line-height:1.45;margin:0}
+.art-page .method-principles .lp-index{font-size:17px;margin:0 0 8px}
+.art-page .method-helix{left:-22px;width:78%;height:100%;object-fit:fill;opacity:.9;filter:drop-shadow(5px 9px 9px #a287aa20)}
+.art-page .method-principles li:before{top:28px;width:24px}
+.art-page .method-principles li:after{top:25px;left:-28px}
+/* Square portrait, larger person, same original face. */
+.art-page .instructor-portrait{aspect-ratio:1;max-width:520px;border-radius:8px;box-shadow:0 18px 45px #72538120;border-color:#d7c2de}
+.art-page .instructor-portrait .instructor-cutout{object-fit:cover;object-position:center 20%;border-radius:0;max-height:none;transform:none}
+.art-page .instructor-portrait:after{height:7%}
+/* Section 03: approved editorial replacement, independent of future video. */
+.art-page .editorial-discovery{background:radial-gradient(ellipse at 100% 30%,#e7dbeb85,transparent 70%),#f4edf5}
+.art-page .editorial-opening h2{max-width:960px}
+.art-page .editorial-intro p{max-width:70ch}
+.art-page .editorial-highlights{list-style:none;padding:0;margin:28px 0;display:grid;gap:20px}
+.art-page .editorial-highlights li{border-top:1px solid #d6c3dc;padding-top:18px}
+.art-page .editorial-highlights .lp-index{font:400 20px/1 var(--serif);color:#9870a3;display:block;margin-bottom:10px}
+.art-page .editorial-highlights h3{font-size:25px;line-height:1.12;margin:0 0 10px}
+.art-page .editorial-highlights p{font-size:16px;line-height:1.5;margin:0}
+/* Real testimonials, all readable in sequence. No carousel or skeletons. */
+.art-page .real-testimonials{margin-top:40px;padding-top:32px;border-top:1px solid #decee2}
+.art-page .real-testimonials>h3{font:400 clamp(32px,8vw,47px)/1.08 var(--serif);color:#4d3558;margin:0 0 16px}
+.art-page .real-quote-grid{display:grid;gap:16px;margin-top:24px}
+.art-page .real-quote{position:relative;padding:24px;border:1px solid #dfd1e4;border-radius:16px;background:#fffdfa;min-width:0;box-shadow:0 8px 20px #84628d09}
+.art-page .real-quote.featured{background:linear-gradient(135deg,#f1e7f5,#fffaf5);border-color:#cbb3d4}
+.art-page .quote-mark{display:block;font:400 52px/.8 var(--serif);color:#b99cc4;margin-bottom:10px}
+.art-page .real-quote blockquote{margin:0}
+.art-page .real-quote blockquote p{font:400 23px/1.25 var(--serif);color:#60436c;margin:0;max-width:none}
+.art-page .real-quote.featured blockquote p{font-size:28px;line-height:1.2}
+.art-page .real-quote strong{font-weight:400;color:#80548d}
+.art-page .quote-gap{display:block;font:400 15px/1.5 var(--sans);margin:8px 0;color:#8c7394}
+.art-page .quote-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:22px;border-top:1px solid #e4d8e7;padding-top:12px}
+.art-page .quote-initial{font:600 15px/1 var(--sans);color:#61436b}
+.art-page .message-original{display:inline-flex;align-items:center;gap:10px;color:#714c7e;font:600 13px/1.35 var(--sans);padding:10px 0;text-underline-offset:4px;min-height:44px}
+.art-page .experience-context{font-size:12px;line-height:1.5;color:#7a6480;margin-top:16px}
+.art-page .testimonials-closing{margin-top:28px}
+.art-page .testimonials-closing>p{font:400 27px/1.15 var(--serif);color:#654770}
+.art-page .offer-panel .offer-price{margin:24px 0 4px}
+.art-page .offer-panel .offer-cash{font-size:14px;margin:0 0 20px}
+.art-page .offer-panel .offer-installments{font-size:21px;margin:0 0 8px;color:#684575}
+.art-page .offer-panel .offer-total{font-size:14px;line-height:1.5;margin:0 auto 24px;color:#6c5b72}
+.art-page .message-lightbox{width:min(940px,calc(100% - 24px));max-width:none;max-height:calc(100dvh - 24px);padding:20px;border:1px solid #d6bfdd;background:#faf7f2;border-radius:16px;color:#60406d;overflow:auto}
+.art-page .message-lightbox::backdrop{background:#23152bd9;backdrop-filter:blur(6px)}
+.art-page .message-dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.art-page .message-dialog-heading h2{font:400 27px/1.1 var(--serif);margin:0}
+.art-page .message-close{flex-shrink:0;width:44px;height:44px;border:1px solid #d5bfdc;border-radius:50%;background:#fffaf5;color:#674474;font-size:28px;cursor:pointer}
+.art-page .message-lightbox .message-privacy{font:400 12px/1.4 var(--sans);margin:10px 0 16px}
+.art-page .message-scroll{max-height:70dvh;overflow:auto;background:#eee8e3;border-radius:8px}
+.art-page .message-scroll img{width:100%;height:auto;display:block}
+.art-page .formation-section .formation-list{grid-column:1/-1}
+@media(min-width:700px){
+ .art-page .method-principles{padding-left:0;gap:18px 12%}
+ .art-page .method-principles li{width:82%;padding:18px;justify-self:start}
+ .art-page .method-principles li:nth-child(2){justify-self:end}
+ .art-page .method-principles h3{font-size:25px;margin-bottom:8px}
+ .art-page .method-principles p{font-size:15px;line-height:1.4}
+ .art-page .method-principles .lp-index{font-size:18px;margin-bottom:8px}
+ .art-page .method-helix{left:21%;width:58%;object-fit:contain}
+ .art-page .instructor-grid{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px}
+ .art-page .instructor-portrait{aspect-ratio:1;max-width:560px;border-radius:8px}
+ .art-page .instructor-portrait .instructor-cutout{border-radius:0;aspect-ratio:auto}
+ .art-page .editorial-highlights{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-block:36px}
+ .art-page .editorial-opening{display:grid;grid-template-columns:1.2fr 1fr;gap:0 48px}
+ .art-page .editorial-opening>.lp-eyebrow{grid-column:1/-1}
+ .art-page .editorial-opening h2{font-size:44px}
+ .art-page .real-quote-grid{grid-template-columns:1fr 1fr}
+ .art-page .real-quote{padding:28px}
+ .art-page .real-quote.featured{grid-column:1/-1;padding:36px 40px}
+ .art-page .real-quote.featured blockquote p{font-size:38px;max-width:32ch}
+}
+@media(prefers-reduced-motion:reduce){.art-page .button{transition:none}.art-page .button:hover,.art-page .button:focus-visible{transform:none}}
+.art-page .instructor-grid .instructor-portrait{order:0}

@@ -1,0 +1,4 @@
+/* Match target semantics and keep headings clear of current or future sticky headers. */
+.art-page section[id],.art-page .anchor-alias,.art-page #conteudo,.art-page #inicio{scroll-margin-top:var(--anchor-offset,20px)}
+.art-page .anchor-alias{position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}

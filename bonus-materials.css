@@ -1,0 +1,67 @@
+/* The bonus block communicates an included continuation, separate from the timetable. */
+.art-page .continuity-bonuses{position:relative;isolation:isolate;margin-top:36px;padding:28px 20px;border-radius:22px;background:linear-gradient(145deg,#fff7e9,#f5e9ee);border:1px solid #d8b9cb;box-shadow:0 12px 32px #65447012}
+.art-page .bonus-intro{max-width:820px}
+.art-page .bonus-intro h3{font:400 clamp(30px,7.8vw,40px)/1.1 var(--serif);color:#51325d;margin:0 0 18px;letter-spacing:-.5px}
+.art-page .bonus-intro .lp-eyebrow{color:#905d70;font-size:10px;letter-spacing:1.4px}
+.art-page .bonus-intro .lp-eyebrow:after{display:none}
+.art-page .bonus-intro>p:last-child{font-size:16px;line-height:1.55;margin-bottom:24px;color:#645267}
+.art-page .bonus-grid{display:grid;gap:18px;position:relative}
+.art-page .bonus-grid:before{content:'';position:absolute;left:33px;top:20px;bottom:20px;border-left:1px solid #cbb1cf;z-index:-1}
+.art-page .bonus-card{display:flex;flex-direction:column;min-width:0;padding:24px 20px;border:1px solid #d9c3dc;background:#fffdf8;border-radius:16px;box-shadow:0 6px 20px #60436a09}
+.art-page .bonus-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.art-page .bonus-number{display:inline-flex;align-items:center;padding:7px 10px;border-radius:7px;background:#eee2f2;color:#734480;font:600 12px/1.2 var(--sans);letter-spacing:.4px}
+.art-page .bonus-heading svg{width:30px;height:30px;stroke:#a37597;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.art-page .bonus-card h4{font:400 28px/1.12 var(--serif);color:#57355f;letter-spacing:-.35px;margin:0 0 16px;text-wrap:balance}
+.art-page .bonus-card>p{font-size:16px;line-height:1.55;color:#65536b;margin:0 0 16px;max-width:none}
+.art-page .bonus-card>.bonus-highlight{margin:auto 0 0;padding-top:16px;border-top:1px solid #eadde7;color:#8a5469;font:600 14px/1.4 var(--sans)}
+.art-page .bonus-action{margin-top:24px}
+.art-page .bonus-action>p{font:600 15px/1.5 var(--sans);color:#604366;margin:0 0 18px}
+.art-page .bonus-action .button{width:100%;margin-top:0}
+.art-page .offer-bonuses{margin:24px 0;padding:22px 18px;text-align:left;border:1px solid #d5bcdb;border-radius:14px;background:linear-gradient(135deg,#f2e6f6,#fff8ee)}
+.art-page .offer-bonuses h3{font:400 25px/1.15 var(--serif);margin:0 0 16px;color:#70427e;text-wrap:balance}
+.art-page .offer-bonuses ul{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.art-page .offer-bonuses li{position:relative;padding-left:24px;color:#674c6e;font:400 15px/1.5 var(--sans)}
+.art-page .offer-bonuses li:before{content:'+';position:absolute;left:0;top:0;color:#a66f7b;font-weight:600;font-size:19px}
+/* Original resources are independent images, with natural proportions and optional enlargement. */
+.art-page .practice-photo img{aspect-ratio:1;object-fit:cover;object-position:center;max-height:none}
+.art-page .authentic-materials{display:grid;gap:24px;margin-top:28px;min-width:0}
+.art-page .authentic-materials figure{margin:0;min-width:0}
+.art-page .authentic-materials .documentary-open{background:#fff;border:1px solid #e0d2df;border-radius:16px;box-shadow:0 10px 26px #62426f0c}
+.art-page .authentic-materials img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;aspect-ratio:auto;border-radius:0}
+.art-page .authentic-materials figcaption{padding:12px 2px 0;font:400 12px/1.45 var(--sans);color:#7e6584}
+.art-page .material-certificate{width:92%;margin-left:auto!important}
+.art-page .record-strip .documentary-group{width:74%;max-width:360px;margin:24px 0 0 auto}
+.art-page .record-strip .documentary-group img{object-fit:cover;aspect-ratio:4/5;object-position:center 72%}
+.art-page .record-strip .documentary-group .documentary-open{transform:rotate(-1deg)}
+/* Keep type readable while allowing slightly wider, more explicit CTA labels. */
+.art-page .primary-cta,.art-page .mirror-method-cta{font-size:16px;padding-inline:18px;gap:10px;white-space:nowrap}
+.art-page .final-action .cta-support{font:400 12px/1.5 var(--sans);color:#775f7d;margin:12px 0 0;max-width:none}
+@media(min-width:700px){
+ .art-page .continuity-bonuses{margin-top:44px;padding:40px 32px}
+ .art-page .bonus-intro h3{font-size:43px;max-width:760px}
+ .art-page .bonus-grid{grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+ .art-page .bonus-grid:before{left:30px;right:30px;top:32px;bottom:auto;border-left:0;border-top:1px solid #cbb1cf}
+ .art-page .bonus-card{padding:28px}
+ .art-page .bonus-card h4{font-size:32px}
+ .art-page .bonus-action{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:28px}
+ .art-page .bonus-action>p{margin:0;max-width:550px}
+ .art-page .bonus-action .button{width:auto;flex-shrink:0}
+ .art-page .formation-section>.lp-container{grid-template-columns:1.05fr 1fr;gap:0 48px}
+ .art-page .formation-section .formation-editorial{grid-column:1;grid-row:1}
+ .art-page .authentic-materials{grid-column:2;grid-row:1/4;margin:0;align-self:center;gap:22px}
+ .art-page .formation-section .formation-list{grid-column:1;grid-row:2;grid-template-columns:1fr;margin:24px 0}
+ .art-page .formation-section>.lp-container>.lp-lead{grid-column:1;grid-row:3;align-self:start}
+ .art-page .material-certificate{width:88%}
+ .art-page .primary-cta,.art-page .mirror-method-cta{font-size:17px;padding-inline:24px;gap:16px}
+}
+/* Reserve authentic image geometry before lazy loading, so long CTA jumps remain stable. */
+.art-page .material-books img{aspect-ratio:1536/1061}
+.art-page .material-certificate img{aspect-ratio:1362/1155}
+
+/* Focused content refinement: real photo, discreet caption and direct testimonials. */
+.art-page .practice-intro{grid-template-columns:minmax(0,1fr)}
+.art-page .practice-photo{width:100%;max-width:820px;margin-inline:auto}
+.art-page .documentary-feature>.experience-context{font-size:10px;line-height:1.5;margin:10px 4px 0;color:#7a6480;text-align:left}
+.art-page #depoimentos{margin-top:36px;padding-top:0;border-top:0}
+.art-page #depoimentos>h3{max-width:850px;margin:0 auto 16px;text-align:center}
+.art-page #depoimentos>p{text-align:center;margin:0 0 28px}

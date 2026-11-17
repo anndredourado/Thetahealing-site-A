@@ -19,10 +19,42 @@
    visibility(value){visible=value;pauseOutside();},
    state(value){state=value;if([0,1,2].includes(value))attempted=true;if(value===1)pauseOutside();emit();},
    blocked(){attempted=true;if(ready&&state!==1)io.unmute();emit();},
-   sound(){if(ready){io.unmute();emit();}},
+   sound(){if(ready){attempted=true;io.unmute();io.play();emit();}},
   };
  }
- if(typeof module==='object'&&module.exports)module.exports={createPlaybackSession};
+ function createSoundStart(io) {
+  let pending=false,started=false,timers=[];
+  const clear=()=>{timers.forEach(io.cancel);timers=[];};
+  const cancel=()=>{clear();pending=false;io.changed(pending,started);};
+  const confirm=()=>{
+   if(pending&&io.state()===1&&!io.muted()){
+    clear();pending=false;started=true;io.changed(pending,started);return true;
+   }
+   return false;
+  };
+  const retry=()=>{
+   if(!pending)return;
+   if(!io.visible()){cancel();return;}
+   if(confirm())return;
+   // YouTube can deliver a delayed pause after unmuting. Complete this click's request.
+   // Stop as soon as audible playback begins, so a later manual pause is never overridden.
+   io.unmute();io.play();
+  };
+  return {
+   request(){
+    if(pending)return;
+    clear();pending=true;started=false;io.changed(pending,started);
+    io.start();
+    if(confirm())return;
+    timers=[io.later(retry,180),io.later(retry,600),io.later(()=>{if(!confirm())cancel();},1500)];
+   },
+   state(){confirm();},
+   cancel,
+   pending:()=>pending,
+   started:()=>started,
+  };
+ }
+ if(typeof module==='object'&&module.exports)module.exports={createPlaybackSession,createSoundStart};
  if(!root.document)return;
  const shell=root.document.querySelector('#descoberta .vsl-shell');
  if(!shell)return;
@@ -30,7 +62,7 @@
  const announcement=shell.querySelector('.vsl-announcement');
  const mask=shell.querySelector('.vsl-sound-mask');
  const soundButton=mask.querySelector('button');
- let soundRequested=false;
+ let soundStart;
  const reduced=root.matchMedia('(prefers-reduced-motion: reduce)');
  const frame=root.document.createElement('iframe');
  frame.id='theta-youtube-player';frame.title='Apresentação de Anndré Dourado';
@@ -47,27 +79,46 @@
  };
  const syncSoundMask=()=>{
   if(!player?.getPlayerState)return;
-  mask.hidden=soundRequested||!player.isMuted()||![1,2,3].includes(player.getPlayerState());
+  mask.hidden=soundStart?.started()||(!soundStart?.pending()&&(!player.isMuted()||![1,2,3].includes(player.getPlayerState())));
  };
  soundButton.addEventListener('click',event=>{
   event.preventDefault();event.stopPropagation();
-  soundRequested=true;
-  // Keep all media calls in the actual click gesture; the iframe receives no click.
-  player.unMute();player.setVolume(100);player.playVideo();disableCaptions();
-  mask.hidden=true;
-  announcement.textContent='Som ativado. Use os controles do vídeo para pausar.';
+  if(!player?.playVideo)return;
+  soundStart.request();
  });
  const session=createPlaybackSession({
   readState:()=>player.getPlayerState(),isMuted:()=>player.isMuted(),
   mute:()=>player.mute(),unmute:()=>player.unMute(),play:()=>player.playVideo(),pause:()=>player.pauseVideo(),
   changed:({ready,state,muted,attempted})=>{
    shell.dataset.playbackState=String(state);shell.dataset.muted=String(muted);shell.dataset.autoplayAttempted=String(attempted);
-   mask.hidden=!ready||soundRequested||!muted||![1,2,3].includes(state);
+   mask.hidden=!ready||soundStart?.started()||(!soundStart?.pending()&&(!muted||![1,2,3].includes(state)));
   }
+ });
+ const screenIsVisible=()=>{
+  const rect=screen.getBoundingClientRect();
+  return !root.document.hidden&&rect.bottom>0&&rect.top<root.innerHeight;
+ };
+ soundStart=createSoundStart({
+  state:()=>player.getPlayerState(),muted:()=>player.isMuted(),visible:screenIsVisible,
+  unmute:()=>player.unMute(),play:()=>player.playVideo(),
+  start:()=>{
+   // Refresh visibility before playback: an older observer result must not pause this gesture.
+   const rect=screen.getBoundingClientRect();
+   const seen=Math.max(0,Math.min(rect.bottom,root.innerHeight)-Math.max(rect.top,0));
+   session.intersection(rect.height?seen/rect.height:0);
+   player.setVolume(100);session.sound();
+  },
+  later:(fn,ms)=>root.setTimeout(fn,ms),cancel:id=>root.clearTimeout(id),
+  changed:(pending,started)=>{
+   soundButton.disabled=pending;
+   if(started){mask.hidden=true;announcement.textContent='Som ativado. Use os controles do vídeo para pausar.';}
+   else if(pending){mask.hidden=false;announcement.textContent='Iniciando o vídeo com som.';}
+   else{syncSoundMask();}
+  },
  });
  session.motion(reduced.matches);session.visibility(!root.document.hidden);
  reduced.addEventListener('change',event=>session.motion(event.matches));
- root.document.addEventListener('visibilitychange',()=>session.visibility(!root.document.hidden));
+ root.document.addEventListener('visibilitychange',()=>{if(root.document.hidden)soundStart.cancel();session.visibility(!root.document.hidden);});
  let lastY=root.scrollY;
  root.addEventListener('scroll',()=>{const y=root.scrollY;if(Math.abs(y-lastY)>1){lastY=y;session.scroll();}},{passive:true});
  const loadAPI=()=>{
@@ -85,7 +136,7 @@
    player=new YT.Player(frame,{events:{
     onReady:()=>{disableCaptions();session.ready();},
     onApiChange:()=>{disableCaptions();syncSoundMask();},
-    onStateChange:event=>{disableCaptions();session.state(event.data);},
+    onStateChange:event=>{disableCaptions();session.state(event.data);soundStart.state();},
     onAutoplayBlocked:()=>{session.blocked();announcement.textContent='Use o botão de reprodução do vídeo para começar.';},
     onError:()=>{session.blocked();announcement.textContent='Não foi possível reproduzir o vídeo. Use as opções do player do YouTube.';}
    }});
@@ -93,6 +144,6 @@
  };
  if('IntersectionObserver' in root){
   const preload=new root.IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){initialize();preload.disconnect();}},{rootMargin:'400px 0px'});preload.observe(screen);
-  const observer=new root.IntersectionObserver(entries=>{for(const entry of entries)session.intersection(entry.isIntersecting?entry.intersectionRatio:0);},{threshold:[0,0.01,0.6,1]});observer.observe(screen);
+  const observer=new root.IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)soundStart.cancel();session.intersection(entry.isIntersecting?entry.intersectionRatio:0);}},{threshold:[0,0.01,0.6,1]});observer.observe(screen);
  }else{initialize();}
 })(typeof window==='undefined'?globalThis:window);

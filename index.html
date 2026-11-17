@@ -11,13 +11,190 @@
 <link href="styles.css" rel="stylesheet"><link href="section02.css" rel="stylesheet"><link href="section03.css" rel="stylesheet"><link href="art-direction.css" rel="stylesheet"><script defer src="config.js"></script><script defer src="app.js"></script>
 <link href="refinement.css" rel="stylesheet">
 <link href="launch.css" rel="stylesheet"><script defer src="launch.js"></script><link href="contrast.css" rel="stylesheet"><script defer src="contrast.js"></script><link rel="stylesheet" href="cta-navigation.css">
-<link rel="stylesheet" href="bonus-materials.css"><link rel="stylesheet" href="copy-v04.css"><link rel="stylesheet" href="brand-update.css"><link rel="stylesheet" href="video-refinement.css"></head>
+<link rel="stylesheet" href="bonus-materials.css"><link rel="stylesheet" href="copy-v04.css"><link rel="stylesheet" href="brand-update.css"><link rel="stylesheet" href="video-refinement.css"><style id="hero-conversion-style">/* One proposition, one action; retain the approved editorial image and DNA. */
+.art-page .site-header{height:auto;min-height:88px;padding-top:6px;padding-bottom:6px}
+.art-page .site-header .brand{width:112px}
+.art-page .site-header .brand-caption{display:none}
+.art-page .site-header nav{top:100%}
+.art-page .hero-artboard{padding-top:16px;padding-bottom:20px;min-height:0}
+.art-page .hero-artboard>.eyebrow{margin-bottom:16px;font-size:10px;letter-spacing:1px;width:65%}
+.art-page .hero-heading{width:61%}
+.art-page .hero-artboard .subheadline{width:59%;font-size:16px;line-height:1.45;margin-top:20px;color:#503b59}
+.art-page .hero-details{gap:14px;padding-bottom:26px}
+.art-page .hero-event-summary{order:0;font:400 14px/1.45 var(--sans);color:#694e74;max-width:42ch;margin:0;text-wrap:pretty}
+.art-page .hero-actions{order:1}
+.art-page .hero-authority{order:2;font:400 11px/1.45 var(--sans);margin:0;color:#7a6481;max-width:55ch}
+.art-page .hero-details .primary-cta{min-height:52px;font-size:16px;margin:0}
+@media(min-width:760px){
+ .art-page .site-header{min-height:104px;padding-block:8px}
+ .art-page .site-header .brand{width:132px}
+ .art-page .hero-artboard{padding-top:38px;padding-bottom:22px}
+ .art-page .hero-artboard>.eyebrow{font-size:12px;margin-bottom:22px;width:52%}
+ .art-page .hero-heading{width:57%}
+ .art-page .hero-artboard .subheadline{width:48%;font-size:21px;line-height:1.4;margin-top:26px;max-width:560px}
+ .art-page .hero-details{padding-bottom:38px;gap:18px;width:58%}
+ .art-page .hero-event-summary{font-size:16px;max-width:52ch}
+ .art-page .hero-authority{font-size:12px}
+ .art-page .hero-shell{min-height:0}
+ .art-page .hero-details .primary-cta{font-size:17px;min-height:56px}
+}
+@media(max-width:359px){
+ .art-page .site-header{padding-inline:20px;min-height:80px}
+ .art-page .site-header .brand{width:100px}
+ .art-page .hero-artboard .subheadline{font-size:15px;width:61%}
+ .art-page .hero-event-summary{font-size:13px}
+}
+@media(min-width:760px){.art-page .hero-visual img{object-position:right top}}
+</style><style id="hero-final-refinement">/* Final Hero: recognition first, question second; no content outside the Hero is restyled. */
+.art-page .site-header{min-height:76px;padding-block:6px}
+.art-page .site-header .brand{width:98px}
+.art-page .site-header .brand-caption{display:none}
+.art-page .site-header nav{top:100%}
+.art-page .hero .hero-artboard{position:relative;min-height:clamp(248px,70vw,292px);height:auto;padding:20px 24px 24px}
+.art-page .hero .hero-heading{width:100%;max-width:none}
+.art-page .hero h1{width:100%;max-width:none;margin:0;font-family:var(--serif);color:#4d3155;letter-spacing:0}
+.art-page .hero-question-lead{display:block;font:400 clamp(18px,5vw,22px)/1.22 var(--serif);letter-spacing:-.25px;margin:0 0 11px;text-wrap:pretty}
+.art-page .hero-question-main{display:block;width:69%;max-width:290px;font:400 clamp(34px,9.6vw,43px)/1.04 var(--serif);letter-spacing:-.65px;text-wrap:initial}
+.art-page .hero-question-main .marked{display:inline-block;position:relative;width:max-content;max-width:100%;white-space:nowrap;padding-bottom:8px}
+.art-page .hero-question-main .marked svg{height:9px;bottom:0;stroke:#bd8d7e}
+.art-page .hero .hero-visual{inset:0;width:100%;height:100%}
+.art-page .hero .hero-visual img{object-position:right center;transform:translateX(24px)}
+.art-page .hero-dna-glow{position:absolute;z-index:1;pointer-events:none;left:43%;top:5%;bottom:5%;width:24%;background:radial-gradient(ellipse at center,#fff1cb 0%,#e0b9e357,transparent 72%);mix-blend-mode:screen;opacity:.14}
+.art-page .hero .hero-details{position:relative;inset:auto;width:100%;gap:10px;padding:16px 24px 26px;background:var(--ivory)}
+.art-page .hero-details .subheadline{order:0;width:100%;max-width:62ch;font:400 15.5px/1.42 var(--sans);letter-spacing:0;color:#59455f;text-align:left;margin:0 0 4px}
+.art-page .hero-details .hero-course-name{order:1;font:600 10.5px/1.4 var(--sans);letter-spacing:1px;color:#795181;margin:0}
+.art-page .hero-details .hero-event-summary{order:2;font:400 14px/1.4 var(--sans);color:#6c5376;max-width:48ch;margin:0}
+.art-page .hero-details .hero-actions{order:3;margin:5px 0 0}
+.art-page .hero-details .primary-cta{min-height:52px;font-size:16px;white-space:nowrap}
+.art-page .hero-details .hero-authority{order:4;font:400 11px/1.45 var(--sans);color:#7e6784;max-width:60ch;margin:2px 0 0}
+@media(min-width:760px){
+ .art-page .site-header{min-height:94px;padding-block:8px}
+ .art-page .site-header .brand{width:116px}
+ .art-page .hero .hero-artboard{position:static;min-height:0;padding:40px 8.4% 24px}
+ .art-page .hero .hero-heading{width:57%;max-width:720px}
+ .art-page .hero-question-lead{font-size:clamp(24px,2.3vw,34px);line-height:1.2;margin-bottom:12px}
+ .art-page .hero-question-main{width:100%;max-width:none;font-size:clamp(48px,5vw,72px);line-height:1.04;letter-spacing:-1.2px}
+ .art-page .hero .hero-visual img{object-position:right top;transform:none}
+ .art-page .hero-dna-glow{left:43%;width:26%;top:0;bottom:2%}
+ .art-page .hero .hero-details{width:58%;padding:0 32px 38px 8.4%;gap:12px;background:transparent}
+ .art-page .hero-details .subheadline{font-size:20px;line-height:1.4;max-width:570px;margin-bottom:8px}
+ .art-page .hero-details .hero-course-name{font-size:11px}
+ .art-page .hero-details .hero-event-summary{font-size:16px}
+ .art-page .hero-details .hero-actions{margin-top:8px}
+ .art-page .hero-details .primary-cta{font-size:17px;min-height:56px}
+ .art-page .hero-details .hero-authority{font-size:12px;margin-top:4px}
+}
+@media(max-width:359px){
+ .art-page .site-header{min-height:72px;padding-inline:20px}
+ .art-page .site-header .brand{width:88px}
+ .art-page .hero .hero-artboard{padding-inline:20px}
+ .art-page .hero-question-lead{font-size:18px}
+ .art-page .hero-question-main{width:75%;font-size:34px}
+ .art-page .hero .hero-details{padding-inline:20px}
+ .art-page .hero-details .subheadline{font-size:15px}
+ .art-page .hero-details .hero-event-summary{font-size:13px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .art-page .hero-question-lead{animation:hero-lead-enter .85s cubic-bezier(.2,.7,.2,1) .06s both}
+ .art-page .hero-question-main{animation:hero-question-enter 1.1s cubic-bezier(.2,.7,.2,1) .52s both}
+ .art-page .hero-dna-glow{animation:hero-dna-breathe 7.5s ease-in-out infinite}
+}
+@keyframes hero-lead-enter{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hero-question-enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hero-dna-breathe{0%,100%{opacity:.11}50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){
+ .art-page .hero-question-lead,.art-page .hero-question-main{animation:none;opacity:1;transform:none}
+ .art-page .hero-dna-glow{animation:none;opacity:.14}
+}
+</style><style id="opening-sequence-refinement">/* Only opening rhythm and relocated course details. */
+.art-page .hero .hero-details{padding-bottom:12px}
+.art-page #descoberta{padding-top:12px;padding-bottom:24px}
+.art-page .course-information{padding:8px 24px 32px;background:var(--ivory);color:var(--green)}
+.art-page .course-information .hero-course-name{font:600 10.5px/1.4 var(--sans);letter-spacing:1px;color:#795181;margin:0 0 10px}
+.art-page .course-information .course-modality{font:400 16px/1.5 var(--sans);color:#604d68;margin:0 0 12px}
+.art-page .course-information .hero-promise{margin:0 0 12px}
+.art-page .course-information .hero-authority{margin:0 0 20px}
+.art-page .course-information .event-facts svg{flex-shrink:0}
+@media(max-width:359px){.art-page .course-information{padding-inline:20px}}
+@media(min-width:760px){
+ .art-page .hero .hero-details{padding-bottom:20px}
+ .art-page #descoberta{padding-top:20px;padding-bottom:32px}
+ .art-page .course-information{padding:8px 48px 40px}
+ .art-page .course-information .hero-course-name{font-size:11px}
+ .art-page .course-information .course-modality{font-size:18px}
+}
+</style><style id="hero-composition-restored">/* Restore the mobile image scale and editorial emphasis; remove no imagery. */
+@media(max-width:759px){
+ .art-page .hero .hero-artboard{min-height:clamp(320px,96vw,430px)}
+ .art-page .hero .hero-visual img{transform:none;object-position:right center}
+ .art-page .hero-question-lead{font-size:clamp(18px,5.5vw,24px);margin-bottom:11px}
+ .art-page .hero-question-main{width:61%;max-width:290px;font-size:clamp(36px,11.5vw,50px);line-height:1.04}
+ .art-page .hero-details .subheadline{text-align:left;margin-left:0;margin-right:0;width:100%}
+}
+</style><style id="hero-left-text-refinement">
+.art-page .hero-artboard>.hero-mobile-support{display:none}
+@media(max-width:759px){
+ .art-page .hero-question-lead{width:100%;font-size:clamp(21px,6.5vw,28px);line-height:1.16;letter-spacing:-.35px}
+ .art-page .hero-artboard>.hero-mobile-support{display:block;position:relative;z-index:2;width:61%;max-width:none;font:400 15.5px/1.42 var(--sans);letter-spacing:0;color:#59455f;text-align:left;margin:20px 0 0}
+ .art-page .hero-details>.subheadline{display:none}
+}
+@media(max-width:359px){.art-page .hero-artboard>.hero-mobile-support{font-size:15px}}
+</style><style id="hero-without-cta-spacing">/* Only the requested transition from Hero into the existing discovery panel. */
+.art-page .hero .hero-details{padding-top:0;padding-bottom:0}
+.art-page #descoberta{padding-top:8px}
+@media(min-width:760px){
+ .art-page .hero .hero-details{padding-bottom:8px}
+ .art-page #descoberta{padding-top:12px}
+}
+</style><style id="discovery-continuous-background">/* Extend the ivory/lavender scene; keep the original DNA and native video. */
+.art-page #descoberta{
+ background:radial-gradient(ellipse at 100% 0%,#e4d7edb8,transparent 70%),linear-gradient(180deg,var(--ivory) 0%,#f7f2f8 70%,var(--ivory) 100%);
+}
+.art-page #descoberta .editorial-opening{
+ background:transparent;
+ border:0;
+ border-radius:0;
+ box-shadow:none;
+ overflow:visible;
+}
+.art-page #descoberta .editorial-opening>h2{color:#4d3155}
+.art-page #descoberta .editorial-opening>.lp-eyebrow{color:#85618f}
+.art-page #descoberta .editorial-opening>.lp-eyebrow:after{border-color:#c2a2bf}
+.art-page #descoberta .editorial-dna{
+ right:-12%;top:-90px;width:clamp(160px,38vw,340px);height:calc(100% + 130px);
+ opacity:.26;transform:rotate(8deg);pointer-events:none;
+}
+@media(min-width:760px){
+ .art-page #descoberta .editorial-dna{right:0;top:-130px;width:340px;height:calc(100% + 180px)}
+}
+</style><style id="discovery-video-direct">/* The existing video follows the Hero without an introductory heading. */
+.art-page #descoberta .editorial-opening{padding-top:0}
+</style><style id="course-schedule-compact">/* Keep the added schedule compact, scoped to the course summary on mobile. */
+@media(max-width:759px){
+ .art-page .course-information{padding-bottom:20px}
+ .art-page .course-information .course-modality{margin-bottom:8px}
+ .art-page .course-information .hero-promise{margin-bottom:8px}
+ .art-page .course-information .hero-authority{margin-bottom:12px}
+ .art-page .course-information .event-facts li{padding-top:10px;padding-bottom:10px}
+ .art-page .course-information .event-facts small{margin-top:3px}
+}
+</style><style id="post-video-discovery-copy">/* The existing course summary now develops the discovery immediately after the video. */
+.art-page .course-information #post-video-discovery-title{font:400 clamp(32px,8.4vw,42px)/1.07 var(--serif);letter-spacing:-.6px;color:#4d3155;max-width:900px;margin:0 0 18px;text-wrap:balance}
+.art-page .course-information .course-discovery-intro{font:400 16px/1.5 var(--sans);color:#604d68;max-width:780px;margin:0 0 14px}
+.art-page .course-information .course-discovery-cta{display:flex;justify-content:space-between;gap:12px;width:100%;max-width:450px;min-height:52px;margin:20px 0 14px;font-size:16px;white-space:nowrap}
+.art-page .course-information .hero-authority{margin-bottom:0}
+@media(min-width:760px){
+ .art-page .course-information #post-video-discovery-title{font-size:clamp(44px,4.5vw,65px)}
+ .art-page .course-information .course-discovery-intro{font-size:18px;line-height:1.55}
+ .art-page .course-information .course-discovery-cta{display:inline-flex;width:auto;gap:24px;font-size:18px;margin-top:28px}
+}
+</style></head>
 <body class="art-page">
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <main><div class="hero-shell" id="inicio" data-section-number="01">
 <img alt="" aria-hidden="true" class="botanical-frame" height="1536" src="assets/botanical-frame.webp" width="864">
 <header class="site-header">
-<a aria-label="Anndré Dourado — início" class="brand" href="#inicio"><img class="brand-logo" src="assets/anndre-dourado-logo.png" alt="Anndré Dourado" width="1536" height="1024"><span class="brand-caption">Instrutor de ThetaHealing</span></a>
+<a aria-label="Anndré Dourado — início" class="brand" href="#inicio"><img class="brand-logo" src="assets/anndre-dourado-logo.png" alt="Anndré Dourado" width="1536" height="1024"></a>
 <span class="course-name">DNA Básico</span>
 <button aria-controls="navigation" aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" type="button"><span></span><span></span></button>
 <nav aria-label="Navegação principal" id="navigation">
@@ -28,28 +205,31 @@
 <div id="conteudo">
 <section aria-labelledby="hero-title" class="hero">
 <div class="hero-artboard">
-<p class="eyebrow">THETAHEALING® DNA BÁSICO · SÃO PAULO OU ONLINE AO VIVO</p>
 <div class="hero-heading">
-<h1 aria-label="Você está fazendo escolhas. Ou repetindo padrões?" id="hero-title"><span class="headline-lead">Você está </span><span class="headline-doing">fazendo </span><br class="desktop-break"><span class="headline-choices">escolhas.</span> <span class="headline-repeat">Ou repetindo </span><span class="marked">padrões?<svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 330 17"><path d="M3 13Q170 -5 326 9"></path></svg></span></h1>
+<h1 aria-label="Você está fazendo escolhas. Ou está repetindo padrões?" id="hero-title"><span class="hero-question-lead">Você está fazendo escolhas.</span>
+<span class="hero-question-main">Ou está repetindo <span class="marked">padrões?<svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 330 17"><path d="M3 13Q170 -5 326 9"></path></svg></span></span></h1>
 </div>
-<picture class="hero-visual"><source media="(max-width: 759px)" srcset="assets/hero-mobile-art.webp"></source><img alt="Mulher de olhos fechados em um momento contemplativo, envolvida por luz natural." fetchpriority="high" height="864" src="assets/hero-helix-luminous.webp" width="1536"></picture><p class="subheadline">E se você pudesse ir além de reconhecer o que se repete na sua vida — e aprendesse a investigar as crenças por trás dessas escolhas?</p>
-</div>
+<p class="subheadline hero-mobile-support">Descubra, em 3 dias, como identificar crenças limitantes e trabalhar os padrões que influenciam suas escolhas.</p>
+<picture class="hero-visual"><source media="(max-width: 759px)" srcset="assets/hero-mobile-art.webp"></source><img alt="Mulher de olhos fechados em um momento contemplativo, envolvida por luz natural." fetchpriority="high" height="864" src="assets/hero-helix-luminous.webp" width="1536"></picture><span class="hero-dna-glow" aria-hidden="true"></span></div>
 <div class="hero-details">
-<p class="hero-description">No ThetaHealing® DNA Básico, você aprende ferramentas para trabalhar crenças, desenvolver sua percepção e começar a praticar em você e com outras pessoas.</p><p class="hero-promise">Três dias de imersão. Aprendizado prático. Certificação internacional oficial.</p><p class="hero-authority">Com Anndré Dourado · Mais de 2.700 atendimentos · Instrutor oficial ThetaHealing®</p>
-<ul aria-label="Informações da imersão" class="event-facts">
-<li><svg aria-hidden="true"><use href="#icon-calendar"></use></svg><span>04 a 06 de<br> dezembro de 2026</span></li>
-<li><svg aria-hidden="true"><use href="#icon-laptop"></use></svg><span>Sexta online ao vivo;<br>sábado e domingo<br class="desktop-break"> presencial ou online ao vivo</span></li>
-<li><svg aria-hidden="true"><use href="#icon-pin"></use></svg><span>São Paulo<small>Região da Avenida Paulista,<br>próximo ao metrô</small></span></li>
-<li><svg aria-hidden="true"><use href="#icon-award"></use></svg><span>Certificação<br> internacional oficial<small>ThetaHealing®</small></span></li>
-</ul>
-<div class="hero-actions"><a class="button primary-cta" href="#descoberta">Quero conhecer a imersão<span aria-hidden="true">→</span></a></div>
+<p class="subheadline">Descubra, em 3 dias, como identificar crenças limitantes e trabalhar os padrões que influenciam suas escolhas.</p>
 </div>
 <svg aria-hidden="true" class="organic-line" preserveaspectratio="none" viewbox="0 0 1536 200"><path class="desktop-curve" d="M-30 60C290 268 531 -20 819 163S1230 255 1570 43"></path><path class="mobile-curve" d="M-20 160C400 200 820 0 1140 45S1460 130 1560 100"></path></svg>
 </section>
 </div>
 </div>
-<section aria-labelledby="discovery-title" class="lp-section editorial-discovery" id="descoberta" data-section-number="02"><div class="lp-container"><div class="editorial-opening"><img alt="" aria-hidden="true" class="editorial-dna" height="1800" loading="lazy" src="assets/dna-helix-pearl.webp" width="600"><p class="lp-eyebrow">A DESCOBERTA</p><h2 id="discovery-title">E se existisse outra maneira de trabalhar seus padrões?</h2><div class="vsl-shell" aria-label="Vídeo de apresentação de Anndré Dourado"><div class="vsl-screen"><div id="vsl-player-slot"></div><div class="vsl-sound-mask" hidden><button class="vsl-sound-activate" type="button" aria-label="Ativar som do vídeo"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m11 5-6 4H2v6h3l6 4V5ZM15 8c3 2 3 6 0 8M18 4c6 4 6 12 0 16"/></svg>Ativar som</button></div><noscript><iframe src="https://www.youtube-nocookie.com/embed/6iiqVUhdL50?playsinline=1&amp;controls=1&amp;autoplay=0&amp;rel=0&amp;cc_load_policy=0" title="Apresentação de Anndré Dourado" width="640" height="360" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></noscript></div><span class="vsl-announcement visually-hidden" role="status" aria-live="polite"></span></div></div><a class="button lp-cta" href="#metodo">Explorar o método<span aria-hidden="true">→</span></a></div></section>
-<section aria-labelledby="mirror-title" class="mirror" id="padroes" data-section-number="03"><img alt="" aria-hidden="true" class="helix-transition" height="1800" loading="lazy" src="assets/dna-helix-pearl.webp" width="600">
+<section class="lp-section editorial-discovery" id="descoberta" data-section-number="02" aria-label="Vídeo de apresentação de Anndré Dourado"><div class="lp-container"><div class="editorial-opening"><img alt="" aria-hidden="true" class="editorial-dna" height="1800" loading="lazy" src="assets/dna-helix-pearl.webp" width="600"><div class="vsl-shell" aria-label="Vídeo de apresentação de Anndré Dourado"><div class="vsl-screen"><div id="vsl-player-slot"></div><div class="vsl-sound-mask" hidden><button class="vsl-sound-activate" type="button" aria-label="Ativar som do vídeo"><svg viewbox="0 0 24 24" fill="none" aria-hidden="true"><path d="m11 5-6 4H2v6h3l6 4V5ZM15 8c3 2 3 6 0 8M18 4c6 4 6 12 0 16"></path></svg>Ativar som</button></div><noscript><iframe src="https://www.youtube-nocookie.com/embed/6iiqVUhdL50?playsinline=1&amp;controls=1&amp;autoplay=0&amp;rel=0&amp;cc_load_policy=0" title="Apresentação de Anndré Dourado" width="640" height="360" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></noscript></div><span class="vsl-announcement visually-hidden" role="status" aria-live="polite"></span></div></div></div></section>
+<section class="course-information" aria-labelledby="post-video-discovery-title"><div class="lp-container">
+<p class="hero-course-name">A DESCOBERTA</p>
+<h2 id="post-video-discovery-title">E se existisse outra maneira de trabalhar os seus padrões?</h2><p class="course-discovery-intro">No ThetaHealing® DNA Básico, você aprende ferramentas para trabalhar crenças, desenvolver sua percepção e começar a praticar em você e com outras pessoas.</p>
+<p class="hero-promise">Três dias de imersão. Aprendizado prático. Certificação internacional oficial.</p>
+<ul class="event-facts" aria-label="Detalhes da imersão">
+<li><svg aria-hidden="true"><use href="#icon-calendar"></use></svg><span>Data<small>04 a 06 de dezembro de 2026.</small><small class="event-time">Sexta-feira: 18h às 20h30.</small><small class="event-time">Sábado e domingo: 9h às 17h.</small></span></li>
+<li><svg aria-hidden="true"><use href="#icon-laptop"></use></svg><span>Modalidade<small>Sexta online ao vivo; sábado e domingo presenciais ou online ao vivo.</small></span></li>
+<li><svg aria-hidden="true"><use href="#icon-pin"></use></svg><span>Localização<small>São Paulo, região da Avenida Paulista, próximo ao metrô.</small></span></li>
+<li><svg aria-hidden="true"><use href="#icon-award"></use></svg><span>Certificação<small>Internacional oficial ThetaHealing®.</small></span></li>
+</ul><a class="button lp-cta course-discovery-cta" href="#imersao">Quero conhecer a imersão<span aria-hidden="true">→</span></a><p class="hero-authority">Com Anndré Dourado · Mais de 2.700 atendimentos · Instrutor oficial ThetaHealing®</p>
+</div></section><section aria-labelledby="mirror-title" class="mirror" id="padroes" data-section-number="03"><img alt="" aria-hidden="true" class="helix-transition" height="1800" loading="lazy" src="assets/dna-helix-pearl.webp" width="600">
 <div aria-hidden="true" class="mirror-shadow"></div>
 <img alt="" aria-hidden="true" class="mirror-botanicals" height="1672" loading="lazy" src="assets/botanical-frame.webp" width="941">
 <div class="mirror-content mirror-opening">
@@ -82,4 +262,4 @@
 <symbol id="icon-award" viewbox="0 0 32 32"><path d="m16 2 4 3 5 1 1 5 3 4-3 4-1 5-5 1-4 3-4-3-5-1-1-5-3-4 3-4 1-5 5-1Z"></path><circle cx="16" cy="15" r="7"></circle><path d="m13 16 2 2 4-5m-9 12-2 5 8-3 8 3-2-5"></path></symbol>
 <symbol id="topic-pattern" viewbox="0 0 48 48"><path d="M5 17c6-10 11-10 19 0s14 10 19 0M5 31c6-10 11-10 19 0s14 10 19 0"></path></symbol><symbol id="topic-test" viewbox="0 0 48 48"><path d="M8 35c8 0 10-4 13-9l6-12c2-4 7-1 5 3l-4 9 6-4c3-2 6 1 3 4L24 39H8ZM10 35V22H4v20h6"></path></symbol><symbol id="topic-change" viewbox="0 0 48 48"><path d="M7 24c0-9 7-17 17-17 7 0 12 3 15 8m0-10v11H28M41 24c0 9-7 17-17 17-7 0-12-3-15-8m0 10V32h11"></path></symbol><symbol id="topic-meditation" viewbox="0 0 48 48"><path d="M24 40C10 35 5 27 5 18c10 0 16 5 19 13 3-8 9-13 19-13 0 9-5 17-19 22Zm0 0c-11-13-10-25 0-35 10 10 11 22 0 35Z"></path></symbol><symbol id="topic-perception" viewbox="0 0 48 48"><path d="M3 24S12 10 24 10s21 14 21 14-9 14-21 14S3 24 3 24Z"></path><circle cx="24" cy="24" r="7"></circle></symbol><symbol id="topic-practice" viewbox="0 0 48 48"><circle cx="14" cy="12" r="6"></circle><circle cx="34" cy="12" r="6"></circle><path d="M3 41V31c0-10 20-10 20 0v10m2 0V31c0-10 20-10 20 0v10M17 28l7 5 7-5"></path></symbol></defs></svg>
 <dialog aria-label="Fotografia ampliada" class="photo-lightbox"><button aria-label="Fechar fotografia" class="lightbox-close" type="button">×</button><div class="lightbox-image-frame"><img alt=""></div></dialog>
-<dialog aria-labelledby="message-title" class="message-lightbox"><div class="message-dialog-heading"><h2 id="message-title">Mensagem original</h2><button aria-label="Fechar mensagem original" class="message-close" type="button">×</button></div><div class="message-scroll"><img alt="Mensagem original ampliada."></div></dialog><script defer src="vsl-v04.js"></script></body></html>
+<dialog aria-labelledby="message-title" class="message-lightbox"><div class="message-dialog-heading"><h2 id="message-title">Mensagem original</h2><button aria-label="Fechar mensagem original" class="message-close" type="button">×</button></div><div class="message-scroll"><img alt="Mensagem original ampliada."></div></dialog><script defer src="vsl-v04.js?v=sound-click-2"></script></body></html>
